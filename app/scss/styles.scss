@@ -46,18 +46,41 @@ $breakpoint-lg: 717px;
     display: none;
   }
 
+  & .chart-float {
+    @include sm-md-xl {
+      width: 42%;
+      margin-right:3%;
+      float: left;
+    };
+  }
+
   & .chart-container {
     width: 100%;
     height: 300px;
     margin-top: -10px;
-    @include sm-md-xl {
-      height: 400px;
+    &#chart-container-2 {
+      @include sm-md-xl {
+        width: 42%;
+      };
+      @include x-small {
+        margin-bottom: 30px;
+      }
+      & .highcharts-legend {
+        @include x-small {
+          display: none;
+          margin-bottom:-20px;
+        }
+      }
     }
   }
 
   & .grow-logo {
     width: 214px;
     margin-top: 20px;
+  }
+
+  & .highcharts-legend {
+    transform: translate(-5px,10px) !important;
   }
   
 }

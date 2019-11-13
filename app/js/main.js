@@ -44,40 +44,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
             Highcharts.chart(chartId, {
                 chart: {
-                    type: 'bar',
+                    type: 'line',
                     styledMode: true,
                     spacingBottom: 25,
-                    spacingRight: 100
+                    spacingRight: 100,
+                    spacingLeft: 2
                 }, 
                 title: {
                     text: null
                 },
                 data: {
-                    googleSpreadsheetKey: '1YOKb5l2VM4aAB2r20N_1aT_1vEajYrP3U-U3A6lZbC0'
-                },
-                // for bar charts only
-                plotOptions: {
-                    series: {
-                        groupPadding: 0.1
-                    } 
+                    googleSpreadsheetKey: '11pMDro69b66WPa_33CNKDUJqsqxMM6F_lQnkQcX06oA'
                 },
                 // for line charts only
-                // plotOptions: {
-                //     series: {
-                //         lineWidth: 1,
-                //         // clip: false,
-                //         marker: {
-                //             enabled: false,
-                //             symbol: 'circle',
-                //             fillColor: '#ffffff',
-                //             states: {
-                //                 hover: {
-                //                     fillColor: '#ffffff'
-                //                 }
-                //             }
-                //         }
-                //     }
-                // },
+                plotOptions: {
+                    series: {
+                        marker: {
+                            // enabled: false,
+                            symbol: 'circle',
+                            fillColor: '#ffffff',
+                            states: {
+                                hover: {
+                                    fillColor: '#ffffff'
+                                }
+                            }
+                        }
+                    }
+                },
                 legend: {
                     align: 'right',
                     symbolRadius: 0,
@@ -91,7 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
                             whiteSpace: 'nowrap'
                         }
                     },
-                    tickLength: 5
+                    tickLength: 5,
+                    type: 'category',
+                    tickmarkPlacement: 'on'
                 },
                 yAxis: {
                     title: false,
@@ -105,7 +100,95 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 tooltip: {
                     shadow: false,
-                    padding: 10
+                    padding: 10,
+                    valueSuffix: '%',
+                    valueDecimals: 0,
+                    shared: true
+                },
+                responsive: {
+                    rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        chart: {
+                        spacingRight: 10
+                        },
+                        legend: {
+                            align: 'left',
+                            x: -18
+                        },
+                        tooltip: {
+                            enabled: false
+                        }
+                    }
+                    }]
+                }
+            });
+
+            Highcharts.chart('chart-container-2', {
+                chart: {
+                    type: 'line',
+                    styledMode: true,
+                    spacingBottom: 25,
+                    spacingRight: 100,
+                    spacingLeft: 2
+                }, 
+                title: {
+                    text: null
+                },
+                data: {
+                    googleSpreadsheetKey: '11pMDro69b66WPa_33CNKDUJqsqxMM6F_lQnkQcX06oA',
+                    googleSpreadsheetWorksheet: 2
+                },
+                // for line charts only
+                plotOptions: {
+                    series: {
+                        marker: {
+                            // enabled: false,
+                            symbol: 'circle',
+                            fillColor: '#ffffff',
+                            states: {
+                                hover: {
+                                    fillColor: '#ffffff'
+                                }
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    align: 'right',
+                    symbolRadius: 0,
+                    verticalAlign: 'top',
+                    x: 50,
+                    itemMarginTop: -10,
+                },
+                xAxis: {
+                    labels: {
+                        style: {
+                            whiteSpace: 'nowrap'
+                        }
+                    },
+                    tickLength: 5,
+                    type: 'category',
+                    tickmarkPlacement: 'on'
+                },
+                yAxis: {
+                    title: false,
+                    labels: {
+                        useHTML: true,
+                        overflow: 'allow'
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                tooltip: {
+                    shadow: false,
+                    padding: 10,
+                    valueSuffix: '%',
+                    valueDecimals: 0,
+                    shared: true
                 },
                 responsive: {
                     rules: [{

@@ -50,9 +50,7 @@
   
   .highcharts-tracker-line {
     stroke-linejoin: round;
-    stroke: $slate-secondary-5;
-    stroke-width: 1.5;
-    stroke-dasharray: 4;
+    stroke-width: 3;
     fill: none;
   }
   
@@ -84,9 +82,10 @@
   .highcharts-yaxis-labels {
     fill: $slate-secondary-5;
     // use this to change the axis label
-    & span:first-child {
+    & span:last-child {
+      transform: translate(10px,0) !important;
       &:after {
-        content: "%";
+      content: "%";
     }
     }
   }
@@ -215,8 +214,8 @@
   }
   
   .highcharts-color-2 {
-    fill: $purple-primary;
-    stroke: $purple-primary;
+    fill: $slate-secondary-4;
+    stroke: $slate-secondary-4;
   }
   
   .highcharts-color-3 {
