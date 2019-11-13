@@ -66,9 +66,8 @@ $breakpoint-lg: 717px;
         margin-bottom: 30px;
       }
       & .highcharts-legend {
-        @include x-small {
-          display: none;
-          margin-bottom:-20px;
+        @include sm-md-xl {
+          visibility: hidden;
         }
       }
     }
