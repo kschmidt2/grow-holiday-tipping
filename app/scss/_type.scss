@@ -24,6 +24,9 @@ $font-stack: 'Avenir', 'Avenir Next', 'Arial', sans-serif;
     font-size: 14px;
     // bottom margin should be 30px if there is no legend
     margin-bottom: 20px;
+    @include sm-md-xl {
+        padding-left: 46%;
+    }
 }
 
 .chart-note {

@@ -48,10 +48,13 @@ $breakpoint-lg: 717px;
 
   & .chart-float {
     @include sm-md-xl {
-      width: 42%;
-      margin-right:3%;
+      width: 44%;
+      margin-right:-3%;
       float: left;
     };
+    & .chart-title {
+      padding-left:0;
+    }
   }
 
   & .chart-container {
@@ -60,12 +63,17 @@ $breakpoint-lg: 717px;
     margin-top: -10px;
     &#chart-container-2 {
       @include sm-md-xl {
-        width: 42%;
+        width: 44%;
       };
       @include x-small {
         margin-bottom: 30px;
       }
       & .highcharts-legend {
+        @include sm-md-xl {
+          visibility: hidden;
+        }
+      }
+      & .highcharts-yaxis-labels {
         @include sm-md-xl {
           visibility: hidden;
         }

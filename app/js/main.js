@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     type: 'line',
                     styledMode: true,
                     spacingBottom: 25,
-                    spacingRight: 100,
+                    spacingRight: 10,
                     spacingLeft: 2
                 }, 
                 title: {
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     type: 'line',
                     styledMode: true,
                     spacingBottom: 25,
-                    spacingRight: 100,
+                    spacingRight: 10,
                     spacingLeft: 2
                 }, 
                 title: {
