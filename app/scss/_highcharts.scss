@@ -79,13 +79,22 @@
     font-size: 14px;
   }
   
-  .highcharts-yaxis-labels {
+  #chart-container .highcharts-yaxis-labels {
     fill: $slate-secondary-5;
     // use this to change the axis label
-    & span:last-child {
-      transform: translate(10px,0) !important;
+    & span:first-child {
       &:after {
       content: "%";
+    }
+    }
+  }
+
+#chart-container-2 .highcharts-yaxis-labels {
+    fill: $slate-secondary-5;
+    // use this to change the axis label
+    & span:first-child {
+      &:before {
+      content: "$";
     }
     }
   }

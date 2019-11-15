@@ -48,8 +48,8 @@ $breakpoint-lg: 717px;
 
   & .chart-float {
     @include sm-md-xl {
-      width: 44%;
-      margin-right:-3%;
+      width: 48%;
+      margin-right:-13%;
       float: left;
     };
     & .chart-title {
@@ -61,19 +61,17 @@ $breakpoint-lg: 717px;
     width: 100%;
     height: 300px;
     margin-top: -10px;
+    @include x-small {
+      height: 200px;
+    }
     &#chart-container-2 {
       @include sm-md-xl {
-        width: 44%;
+        width: 48%;
       };
       @include x-small {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
       }
-      & .highcharts-legend {
-        @include sm-md-xl {
-          visibility: hidden;
-        }
-      }
-      & .highcharts-yaxis-labels {
+      & .highcharts-xaxis-labels {
         @include sm-md-xl {
           visibility: hidden;
         }
@@ -88,6 +86,10 @@ $breakpoint-lg: 717px;
 
   & .highcharts-legend {
     transform: translate(-5px,10px) !important;
+  }
+
+  & .highcharts-series-group {
+    transform: translate(.5px,0)
   }
   
 }

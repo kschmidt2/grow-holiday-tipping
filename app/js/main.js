@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             Highcharts.chart(chartId, {
                 chart: {
-                    type: 'line',
+                    type: 'bar',
                     styledMode: true,
                     spacingBottom: 25,
                     spacingRight: 10,
@@ -54,29 +54,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     text: null
                 },
                 data: {
-                    googleSpreadsheetKey: '11pMDro69b66WPa_33CNKDUJqsqxMM6F_lQnkQcX06oA'
+                    googleSpreadsheetKey: '1Wetcy2wjmiL-J9dheCz-Zhvl-ZmRfig3WZCQA7XGOII'
                 },
-                // for line charts only
                 plotOptions: {
                     series: {
-                        marker: {
-                            // enabled: false,
-                            symbol: 'circle',
-                            fillColor: '#ffffff',
-                            states: {
-                                hover: {
-                                    fillColor: '#ffffff'
-                                }
-                            }
-                        }
-                    }
+                        groupPadding: 0.1,
+                        clip: false,
+                    } 
                 },
                 legend: {
-                    align: 'right',
-                    symbolRadius: 0,
-                    verticalAlign: 'top',
-                    x: 10,
-                    itemMarginTop: -10
+                    enabled: false
                 },
                 xAxis: {
                     labels: {
@@ -93,7 +80,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     labels: {
                         useHTML: true,
                         overflow: 'allow'
-                    }
+                    },
+                    max: 60,
+                    tickAmount: 4
                 },
                 credits: {
                     enabled: false
@@ -128,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             Highcharts.chart('chart-container-2', {
                 chart: {
-                    type: 'line',
+                    type: 'bar',
                     styledMode: true,
                     spacingBottom: 25,
                     spacingRight: 10,
@@ -138,30 +127,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     text: null
                 },
                 data: {
-                    googleSpreadsheetKey: '11pMDro69b66WPa_33CNKDUJqsqxMM6F_lQnkQcX06oA',
+                    googleSpreadsheetKey: '1Wetcy2wjmiL-J9dheCz-Zhvl-ZmRfig3WZCQA7XGOII',
                     googleSpreadsheetWorksheet: 2
                 },
-                // for line charts only
                 plotOptions: {
                     series: {
-                        marker: {
-                            // enabled: false,
-                            symbol: 'circle',
-                            fillColor: '#ffffff',
-                            states: {
-                                hover: {
-                                    fillColor: '#ffffff'
-                                }
-                            }
-                        }
-                    }
+                        groupPadding: 0.1,
+                        clip: false,
+                    } 
                 },
                 legend: {
-                    align: 'right',
-                    symbolRadius: 0,
-                    verticalAlign: 'top',
-                    x: 50,
-                    itemMarginTop: -10,
+                    enabled: false
                 },
                 xAxis: {
                     labels: {
@@ -178,7 +154,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     labels: {
                         useHTML: true,
                         overflow: 'allow'
-                    }
+                    },
+                    max: 60,
+                    tickAmount: 4
                 },
                 credits: {
                     enabled: false
